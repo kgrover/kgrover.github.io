@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content="Hugo 0.27.1" />
+		<title>Living with Sisyphus - Kshitij Grover</title>
+
+		<meta name="description" content="">
+
+
+		
+
+		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Raleway">
+
+		
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ocean.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+		
+		
+
+		
+		<link rel="stylesheet" href="/css/normalize.css"/>
+		<link rel="stylesheet" href="/css/ui.css"/>
+		
+		<style>
+	a { color: #dd4d67; }
+	blockquote { border-left-color: #dd4d67; }
+	.bar a:hover {
+		color: #dd4d67;
+		text-decoration: none; }
+	.sep {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		margin-left:0;
+		width: 24rem;
+		border-top: 2px solid #dd4d67; }
+</style>
+
+	</head>
+
+<body>
+<header class="container">
+	<div class="u-header">
+		<nav class="bar">
+	<ul><li>
+			<a href="/">
+				<img class="icon-text" src="/img/prev.svg"/>
+			</a>
+		</li></ul>
+</nav>
+
+	</div>
+</header>
+<main class="container">
+
+<article>
+	<header><hgroup id="brand">
+	<h1>Living with Sisyphus</h1>
+	<h5>
+		<time datetime="2017-03-16 00:00:00 &#43;0000 UTC">16 Mar 2017</time>
+		</h5>
+	
+</hgroup>
+</header>
+	
+	<nav>
+	
+		<a class="prev-post" href="http://kshitijgrover.com/papers/ignoring-diagnosis/">
+			<img class="icon-text" src="/img/prev.svg"/>Ignoring the Diagnosis</a>
+	
+	
+		<a class="next-post" href="http://kshitijgrover.com/files/yablo-response.pdf">Mental Causes: A Response to Yablo<img class="icon-text" src="/img/next.svg"/>
+		</a>
+	
+	</nav>
+</article>

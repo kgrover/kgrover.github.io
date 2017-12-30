@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content="Hugo 0.27.1" />
+		<title>Causality: Ambiguous Manipulations - Kshitij Grover</title>
+
+		<meta name="description" content="Introduction In this essay, I will consider the problem of modeling a causal system using scientific data and a set of basic assumptions. In myriad fields — from economics to medicine — a significant goal is to build a model of the system under study so we can properly perform causal inference. Specifically, we want to parse relationships from the variables in the data that will accurately predict the functioning of the system under a modified state.">
+
+
+		
+
+		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Raleway">
+
+		
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ocean.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+		
+		
+
+		
+		<link rel="stylesheet" href="/css/normalize.css"/>
+		<link rel="stylesheet" href="/css/ui.css"/>
+		
+		<style>
+	a { color: #dd4d67; }
+	blockquote { border-left-color: #dd4d67; }
+	.bar a:hover {
+		color: #dd4d67;
+		text-decoration: none; }
+	.sep {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		margin-left:0;
+		width: 24rem;
+		border-top: 2px solid #dd4d67; }
+</style>
+
+	</head>
+
+<body>
+<header class="container">
+	<div class="u-header">
+		<nav class="bar">
+	<ul><li>
+			<a href="/">
+				<img class="icon-text" src="/img/prev.svg"/>
+			</a>
+		</li></ul>
+</nav>
+
+	</div>
+</header>
+<main class="container">
+
+<article>
+	<header><hgroup id="brand">
+	<h1>Causality: Ambiguous Manipulations</h1>
+	<h5>
+		<time datetime="2016-03-14 00:00:00 &#43;0000 UTC">14 Mar 2016</time>
+		</h5>
+	
+</hgroup>
+</header>
+	
+
+<h3 id="introduction">Introduction</h3>
+
+<p>In this essay, I will consider the problem of modeling a causal system using scientific data and a set of basic assumptions. In myriad fields — from economics to medicine — a significant goal is to build a model of the system under study so we can properly perform causal inference. Specifically, we want to parse relationships from the variables in the data that will accurately predict the functioning of the system under a modified state. I will begin by giving a brief account of the process through which we can build such a model, and pay particular attention to the problem of ambiguity in manipulations as stated by Spirtes and Scheines. I will then consider the practical implications of the scenario in which this ambiguity arises, and argue that it is not entirely catastrophic to the field. In particular, the novel contribution of this piece is to trace the genuine historical motivations underlying an example in this field, which subsequently inform my position.</p>
+
+<h3 id="building-a-causal-model">Building a Causal Model</h3>
+
+<p>Although there are many subtleties when it comes to building a causal graph from a set of data, I will outline only what is necessary to understand the core of my argument.</p>
+
+<p>Let’s consider a set of variables, V, under measurement, and assume that this set is causally sufficient (there cannot be any extraneous, unmeasured factors that are connected to two variables in V). We will assume that at the time of measurement, the probability distribution is stationary and the relationships are acyclic: these two assumptions will allow us to build a time-index free directed causal graph G with a vertex for each variable. A directed edge from a variable A to B (“A causes B”) signifies that a change in A leads to a change in B (in other words, we implicitly assume that the notion of causality is dependent on interventions on variable states).</p>
+
+<p>Importantly, we must make two more assumptions: the Markov Condition, and Faithfulness. The Markov Condition says that any variable is independent of its non-descendants, conditional its parents. Faithfulness, on the other hand, implies that there are no unobserved independencies: any independence in the data distribution must be modeled by the graph itself and not occur by some sort of ‘canceling out’ effect of positive and negative correlations. The full justification for these assumptions is out of the scope of this paper, and can be found in Causation, Prediction and Search by Spirtes et al.</p>
+
+<p>Granted these assumptions, there are well-known algorithms for developing a set of possible causal graphs (often called a Markov equivalence class). These algorithms function by starting with a completely connected graph: then, by statistically testing the probabilistic unconditional and conditional independencies amongst the variables, they can narrow down the set of causal graphs that fit the data.</p>
+
+<h3 id="manipulations">Manipulations</h3>
+
+<p>For practical purposes, causal graphs will be most useful when they can be used to infer how the system will respond to an intervention on one or more variables. Let’s consider an abbreviated version of the example used by Spirtes and Scheines, and one that I will refer to through this paper (Spirtes 2).</p>
+
+<p>Suppose we’re interested in modeling the relationship between Heart Disease (HD), LDL, and HDL cholesterol, each of which take on values of Low/Medium/High. We can collect data from our population of units (e.g. patients in a clinical trial), and then build the causal graph: we will arrive on the well studied result that LDL and HDL both have a causal relationship with HD. The former is correlated with an increase in HD, and the latter is correlated with a decrease in HD. This will translate properly into the idea of interventions: manipulating HDL or LDL to ‘High’ will indeed result in an observed change in the probability of HD, as they are the supposed causal drivers in the system.</p>
+
+<h3 id="ambiguous-manipulations">Ambiguous Manipulations</h3>
+
+<p>To pinpoint the concern of this paper, we will have to tweak the preceding example. Suppose, instead of measuring HDL and LDL cholesterol, we simply measure Total Cholesterol (TC). We can immediately see that TC is not a causal driver in the “true” system; it is definitionally (as opposed to causally) related to HDL and LDL. Moreover, TC under-specifies its root variables: specifying TC = Medium could mean LDL = High and HDL = Low, or the exact opposite.</p>
+
+<p>Thus, Spirtes and Scheines appropriately term the manipulation of TC to be ambiguous: we cannot reliably predict how the system (in this case, specifically Heart Disease) will react when we intervene on TC, as the intervention genuinely changes the underlying LDL and HDL in an unspecified way.</p>
+
+<h3 id="suggested-solutions">Suggested Solutions</h3>
+
+<p>The issue of ambiguous manipulations clearly points to a crucial epistemic problem in the scientific endeavor. When can we identify that manipulations in any system under study are ambiguous? How can we remedy or be better positioned under these circumstances?</p>
+
+<p>Is it possible for scientists to know when they are measuring (and thus postulating ambiguous manipulations on) the wrong variable? Given what we know about HDL and LDL (and their opposing contributions to the effects on HD), one might appeal to the absurdity of measuring and manipulating TC instead. Indeed, parametrizing the relationship between TC and HD would be problematic at best and impossible at worst; for example, our measurements would inevitably contain an enormous amount of variance amongst patients who had elevated TC levels, even controlling for all other factors. However, note that we are not always in this epistemically privileged position of knowing the underlying causal drivers.</p>
+
+<p>If we could only measure (and manipulate) TC due to lack of research in the field, what indications would we have that TC is indeed a function of two underlying and conflicting causal variables?</p>
+
+<p>In order to advance this account, we must first admit a more fundamental fact about the scientific endeavor: a search for (or a belief in) deterministic real-world processes. Although I do not fully argue for this claim here, I would like to note that it is not as hefty as it may seem. We routinely make the implicit assumption in experimentation that building a better picture of the world involves collecting data that exhibits lower variation and models that respond in stricter accordance with expected outcomes. Surprisingly — given a modern account of quantum mechanics — we may know that fundamental atomic scale processes are not deterministic, but the mentality of eliminating noise holds on a general multidisciplinary scale.</p>
+
+<p>Returning to our example with this in mind, we first note that LDL and HDL themselves are not perfectly deterministic predictors of HD; in any practical situation, there will always be latent variables, error terms, and noise. However, we intuitively accept LDL and HDL as a ‘better’ causal account since we are better able to predict a patient’s likelihood of HD at this level of analysis. This points to a solution to these scenarios given that we have an omniscient view of the variables: we would like to pick the set of variables that lead to lower variance upon manipulation and measurement.</p>
+
+<p>In the more common case that we are blind to the more granular variables, the situation is more perplexing — should we simply accept that a given causal system is inherently noisy, or should we continue to search for divisions of our variables that exhibit lower variance? Although the example in Spirtes is ostensibly hypothetical, it will be useful to consider the factual history of TC and HD . In the 1950 paper entitled Blood Lipids and Human Atherosclerosis, Gofman et al. report:</p>
+
+<blockquote>
+<p>[…] in spite of evidence that cholesterol levels are often above 260 mg % in persons manifesting atherosclerosis, there is also good evidence that a high proportion of individuals develop atherosclerosis with blood cholesterol [in the accepted range] […] Further, even with cholesterols above 200 mg.% [..] the extent of atherosclerosis in humans was not well correlated with the actual cholesterol levels (Gofman 2, 161).</p>
+</blockquote>
+
+<p>As we suspect, Gofman’s reported reasoning is the difficulty his team and the medical community had in parametrizing the relationship between cholesterol levels and the “extent of atherosclerosis”. Had Gofman believed that this biological process was inherently noisy (as opposed to a deterministic), they certainly would not have pursued the topic further. Later in the paper, they report the findings that via centrifugal separation, the team was able to discover specific (low) density molecules that were better correlated with atherosclerosis, a precursor to the distinction we make between LDL and HDL today. What motivated researchers like Gofman to use the centrifuge and look for a better set of variables? In another paper, Gofman notes that:</p>
+
+<blockquote>
+<p>Some workers claim a significant elevation in blood cholesterol level for a majority of patients with atherosclerosis, whereas others debate this finding vigorously. (Gofman 1, 166–167).</p>
+</blockquote>
+
+<p>This statement points to a crucial characteristic we can expect to observe when dealing with ambiguous manipulations. Simplistically speaking, if one experimenter manipulates TC to ‘Medium’ by (unknowingly) recommending high levels of HDL and another manipulates TC to ‘Medium’ with low levels of HDL, then they will both consistently see a strong correlation between TC and HDL. This sort of ‘vigorous’ inconsistency between experimenters (but perhaps less variance amongst one set of manipulations) will often indicate an ambiguous manipulation. Note that this line of thought also does work to address the question of how we can distinguish noisy processes: if the process was inherently noisy we would expect to see similarly noisy results in any such dataset.</p>
+
+<p>Apart from this indicator, Gofman’s papers suggest another situation in which we should be suspicious that our level of analysis is incomplete: when the level of variance between variables in the current causal process is an anomalous given other results in the field. In his paper about atherosclerosis, Gofman specifically cites the comparatively well-studied relationship between insulin and diabetes mellitus (167). If we can establish the relationship between another molecule in the bloodstream (insulin) and a macro-level disease such as diabetes, the burden of proving that a similar causal model is fundamentally noisy will be much larger. If we generalize this notion, we can see that each field will have a very different ‘threshold’ of variance that it is willing to accept, whether that is due to the necessary precision required in the outcome of studies, or acknowledged sampling difficulties. In a field where we are concerned with which variables cause certain types of fatal cancer, we are certainly much less willing to accept noise in the parametrization of variables, and will do all that is possible to eliminate ambiguity. However, this may not be the case when it comes to studying consumer behavior in economics, where discovering any ‘deterministic’ relationships by splitting variables to a granular scale may be futile.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Although it may be tempting to assume that there is no reliable way to determine when we have the right variables in a system, we have shown that there exist some indicators that should make us suspicious. Through a discussion centered on Spirtes and Scheines’ simple example on Total Cholesterol, it seems clear that we should use lower variance in data (higher degree of determinism) as a standard. Moreover, there are certain practical situations such as conflicting results from experimenters and deviating from the field that can help us to detect ambiguous manipulations.</p>
+
+	<nav>
+	
+	
+		<a class="next-post" href="http://kshitijgrover.com/papers/finite-frequentism/">A Defense of Finite Frequentism<img class="icon-text" src="/img/next.svg"/>
+		</a>
+	
+	</nav>
+</article>

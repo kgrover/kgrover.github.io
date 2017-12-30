@@ -4,7 +4,7 @@ theme = "manis"
 pluralizeListTitles = false
 paginate = 10								# Minimum number of item before paginate navigation show up
 canonifyURL = true
-
+publishDir = "docs"
 
 [taxonomies]
 	tag = "tags"

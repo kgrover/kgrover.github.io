@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content="Hugo 0.27.1" />
+		<title>A Defense of Finite Frequentism - Kshitij Grover</title>
+
+		<meta name="description" content="In this essay, I will aim to defend the account of probability known as Finite Frequentism. Finite Frequentism holds that the probability of A is simply the relative frequency of realized occurrences of A with respect to a reference class of repeated or similar events. Let me briefly illustrate this with an example: if we draw a ball from an urn 1000 times, and we observe a red ball 50 times, we assert that the probability of drawing a red ball is 0.">
+
+
+		
+
+		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Raleway">
+
+		
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ocean.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+		
+		
+
+		
+		<link rel="stylesheet" href="/css/normalize.css"/>
+		<link rel="stylesheet" href="/css/ui.css"/>
+		
+		<style>
+	a { color: #dd4d67; }
+	blockquote { border-left-color: #dd4d67; }
+	.bar a:hover {
+		color: #dd4d67;
+		text-decoration: none; }
+	.sep {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		margin-left:0;
+		width: 24rem;
+		border-top: 2px solid #dd4d67; }
+</style>
+
+	</head>
+
+<body>
+<header class="container">
+	<div class="u-header">
+		<nav class="bar">
+	<ul><li>
+			<a href="/">
+				<img class="icon-text" src="/img/prev.svg"/>
+			</a>
+		</li></ul>
+</nav>
+
+	</div>
+</header>
+<main class="container">
+
+<article>
+	<header><hgroup id="brand">
+	<h1>A Defense of Finite Frequentism</h1>
+	<h5>
+		<time datetime="2016-11-02 00:00:00 &#43;0000 UTC">02 Nov 2016</time>
+		</h5>
+	
+</hgroup>
+</header>
+	
+
+<p>In this essay, I will aim to defend the account of probability known as Finite Frequentism. Finite Frequentism holds that the probability of <strong>A</strong> is simply the relative frequency of realized occurrences of <strong>A</strong> with respect to a reference class of repeated or similar events. Let me briefly illustrate this with an example: if we draw a ball from an urn 1000 times, and we observe a red ball 50 times, we assert that the probability of drawing a red ball is 0.05[1]. Hajek has argued that the interpretation is simply a non-starter. My goal in this paper is not to explicitly defend the account against all his objections, but rather to illustrate that Finite Frequentism should remain a contender as an interpretation of probability. I will do this by showing that this interpretation is widely applied in the scientific literature, and then showing that we can avoid Hajek’s ‘knockdown’ concerns.</p>
+
+<p>Before considering any objections, I want to quickly motivate the idea that the account deserves credit insofar as an interpretation of probability[2]. One major criterion for a ‘good’ interpretation of probability is its applicability to science. Though finite frequentism may not find much serious support in the philosophical literature, I contend that it is often prima facie taken as the proper notion of probability in scientific studies. Finite frequentism finds favor in science because it has a rather simple epistemic story and favors the empiricist notions that we all share. For example, consider the following passage from a cholesterol study measuring the effects of Simvastatin[3]:</p>
+
+<blockquote>
+<p>The probability that a woman would escape a major coronary event was 77.7% in the placebo group and 85.1% in the simvastatin group<a href="Pedersen 1386">…</a></p>
+</blockquote>
+
+<p>Table 1 shows that this is indeed the number of observed cases out of a decidedly finite reference class, consistent with the finite frequentist interpretation. Not only are statements like this well accepted in science (this paper has been cited well over 7000 times), it is unclear how well another interpretation of probability (Laplacian, degrees of belief, or otherwise) would be able to form the basis for such statements.</p>
+
+
+<figure >
+    
+        <img src="/img/finite-frequentism-fig-1.png" />
+    
+    
+</figure>
+
+
+<p>Having shown that finite frequentism is not obviously mistaken, I want to now argue that Hajek’s arguments can be properly refuted.</p>
+
+<h3 id="reference-class-objections">Reference Class Objections</h3>
+
+<p>Let me first argue that the reference class primitive is necessary, reasonable and presents ‘issues’ that are not unique to the finite frequentist account. Hajek’s worry is that by taking a reference class as a primitive, we are committing to always talking about probabilities relative to the set of objects in the class. I will bite the bullet here: all probabilities are indeed conditional on some reference class. Take the simplest example of tossing a two-sided coin. If we say that the probability of a heads-up toss is unconditionally ½, our statement is really something of the form P(coin lands heads up | coin is not weighted, toss is performed a specific way)[4] = <sup>1</sup>&frasl;<sub>2</sub>, where our reference class is implicit. Similarly, in physics, we might say that the probability of an electron being in some orbital shell is 1e–6. In this case, this probability is the number of atomic simulations in which the simulated electron appears in the designated orbital shell, and so is relative to our set of simulations. As for platitudes that signal unconditional probabilities, this merely suggests that in certain cases we do have canonical reference classes. Having said this, the natural question now follows: how are we to delineate reference classes in terms of ‘sufficient similarity’? At arbitrary granularity, we can always arrive at differences between any two objects in the reference class — but of course, finite frequentism seems absurd in the case of the trivial reference class. I want to argue that the level of difference we can accept amongst reference classmates is highly context dependent, and rightly so. For example, consider the case where a 20-year-old male X is to ask his doctor the probability of dying by age 50. The doctor might calculate the probability as follows:</p>
+
+
+<figure >
+    
+        <img src="/img/finite-frequentism-eq-1.png" />
+    
+    
+</figure>
+
+
+<p>Equation 1
+where R is a finite set of males (who lived to 20) in the same income bracket and country as X[5]. The worry is the following: should the doctor continue to narrow down the reference class R to exclude those not of the same race, ethnic background, family size, dispositions to genetic disease, and so on? One reply might be to say that we should only match reference classmates on causally relevant factors. In this case, living on a specific street will likely not be causally relevant to death, whereas the level of access to proper medical care will be. Even if we assume that any notion of causal relevance will depend circularly on how it affects the probability, this is only problematic if we assume there is ‘one correct’ probability. Consider a second example of two finite frequentists <strong>A</strong> and <strong>B</strong> calculating probability a horse H (of breed H*) in the outermost stall will win a race. Perhaps <strong>A</strong> thinks to look at past races consisting of the same breed of horses where H* wins, and B thinks to look at races consisting of the same weather conditions where the horse in the outermost stall has won. These are clearly different reference classes (and so probabilities), but both seem defensible. I imagine a classic probability theorist might argue that this is the wrong way to go about assigning the probability. Rather, we should appeal to possible outcomes in the system and assign them equal probabilities given our epistemic indifferences. I suspect that breaking down a complex situation like this into equi-possible elementary outcomes will also require some notion of which variables are important — after all, on which axes shall we split? Of course, causal relevance comes back to bite us[6]. In any case, this problem is not unique to the finite frequentist interpretation of probability. Though I have been brisk here, I have aimed to show that Hajek’s concerns involving reference classes are not solid reasons for rejecting our account.</p>
+
+<h3 id="the-bias-single-occurrence-objections">The Bias &amp; Single-Occurrence Objections</h3>
+
+<p>There is a further problem which is often considered to be fatal to the finite frequentist account: what if our measurements are somehow biased? Consider the following: we often say that a fair coin <strong>C</strong> can land ‘heads’ 9 out of 10 times that we flip it[7]. Clearly, the thought goes, the finite frequentist can commit to no such platitude since P(<strong>C</strong> lands heads) is nothing more or less than (# of actual occurrences of heads in flips of C)/(total # of flips of C) = <sup>9</sup>&frasl;<sub>10</sub>. We would instead like to say that it is still possible, appealing to the fairness of the coin, that P(<strong>C</strong> lands heads) = ½, even if we destroy the coin and never flip it again. Surely, if the assumption is that probability is an intrinsic property of the coin, this argument is begging the question. Even so, the finite frequentist can salvage this platitude. I think the inconsistency here occurs via our appeal to the ‘fairness’ of the coin, which seems to be an a priori commitment before (or regardless of) any observations. We must explicitly make the jump by committing to the fact that <strong>C</strong> is part of a larger collective (i.e. reference class) of 2-sided symmetric coins. Having stated this, we might say that P(<strong>C</strong> lands heads) with respect to the reference class of ‘all flips of coins sharing the fairness characteristic with C’ is (# of actual occurrences of heads in all fair coin flips)/(total # of all fair coin flips), which is indeed close to ½. I will not pretend to defend a rigorous definition of fairness here, but my point is simply that the in-sample error objection relies on some relation that flips of <strong>C</strong> have with a broader reference class, something we can express in a finite frequentist account. The finite frequentist can pursue similar arguments for single-case occurrences. When a coin C’ is flipped once (total), but our intuitions tell us the probability of heads is something other than 0 or 1, we are implicitly committing to a broader reference class of coin flips (where <strong>C&rsquo;</strong> is not involved). Moreover, the finite frequentist will not have major difficulty in making sense of ‘unique’ single-occurrence events such as P(Trump wins the 2016 election). As illustrated in the horse example earlier, we might first characterize the events by its relevant variables and form multiple probabilities[8], or we might identify the probability with relative frequencies in a reference class of simulations as in the electron example.</p>
+
+<h3 id="other-issues">Other Issues</h3>
+
+<p>I want to wrap up my defense by considering a few troublesome issues that are consistently present in Hajek’s arguments, including ones we have already seen. Hajek will often beg the question: for example, he says that the concept of probability should explain relative frequencies. Of course, this assumes that we simply cannot identify the two — and so in what sense can he expect one to mount a defense against this? Moreover, he conflates metaphysics and epistemology in various places. Most notoriously, he makes the claim that the probabilities in this account are influenced by future events. Of course, this is not the case: the probability is well-defined even if the entirety of the reference class is not known at time t or observed by a subject (after all, finite frequentism is an objective view).</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Though I am under no illusion that I have saved the view from all of Hajek’s arguments, it should now seem clear that Hajek’s 15 contentions are not as bulletproof as they might first seem — and the finite frequentist account still deserves to hold a place as an interpretation.</p>
+
+<p>[1] Strictly speaking, it is 0.05 with respect to the draws we have just described. We can restrict the reference class further to fewer draws, or more generally consider all draws made, whether we observe them or not. More on this later.</p>
+
+<p>[2] The reader might find that this section makes no strong claims of correctness. My goal here is only to show that the finite frequentist does not deserve to always be on her last leg when defending the account, and we should feel the force here as much as Hajek’s own intuitions.</p>
+
+<p>[3] Randomized trial of cholesterol lowering in 4444 patients with coronary heart disease: the Scandanavian Simvastatin Survival Study (4S), Published in Lancet 1994 by Pedersen et al. The passage quoted is taken from ‘Results in Women and patients aged &gt; 60’.</p>
+
+<p>[4] We will get to issues with framing a reference class later in this argument: the point of this example is simply to motivate the idea that reference classes are needed in the simplest of cases.</p>
+
+<p>[5] With this example, I also want to suggest that this is a quite natural way to determine this probability — we perform this procedure all the time, and with quite remarkable success!</p>
+
+<p>[6] For extended discussion, see Bertrand’s box paradox.</p>
+
+<p>[7] I call this the in-sample error objection because we might conventionally say that <sup>9</sup>&frasl;<sub>10</sub> is nothing more than the tally in our sample, and cannot be identified with probability.</p>
+
+<p>[8] e.g. P(businessman wins) with respect to all elections; P(individual with net worth over $1b USD wins), etc.</p>
+
+	<nav>
+	
+		<a class="prev-post" href="http://kshitijgrover.com/papers/ambiguous-manipulations/">
+			<img class="icon-text" src="/img/prev.svg"/>Causality: Ambiguous Manipulations</a>
+	
+	
+		<a class="next-post" href="http://kshitijgrover.com/papers/sex-selective-abortion/">Sex Selective Abortion<img class="icon-text" src="/img/next.svg"/>
+		</a>
+	
+	</nav>
+</article>

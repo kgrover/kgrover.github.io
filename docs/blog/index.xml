@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Kshitij Grover</title>
+    <link>http://kshitijgrover.com/blog/</link>
+    <description>Recent content in Blog on Kshitij Grover</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kshitijgrover.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Newcomb&#39;s Paradox</title>
+      <link>http://kshitijgrover.com/blog/newcomb/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/blog/newcomb/</guid>
+      <description>Newcomb&amp;rsquo;s paradox is interesting because the philosophical community is split on it almost evenly. [1]
+I just want to introduce the problem here, and not make my own argument. In particular, I want to see what you think after reading the problem setup. I will detail very basic arguments, though.
+Suppose you&amp;rsquo;re walking in the forest towards a small hut. Inside this hut, there is a wizard who can predict your actions with impeccable accuracy and has set up a game for you to play with two boxes.</description>
+    </item>
+    
+    <item>
+      <title>Communication at Caltech</title>
+      <link>http://kshitijgrover.com/blog/communication-caltech/</link>
+      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/blog/communication-caltech/</guid>
+      <description>As a graduating senior, it can sometimes be hard to have an unbiased perspective of institute policy; this is a time of transition perhaps from a sense of frustration over the 4-year curriculum’s perceived shortcomings to a more rose-tinted retrospective view. Despite this, there remains one important piece missing from Caltech as it prepares undergraduates for the “real world”[1] : teaching communication well.
+The motto of our institute is “The truth shall make you free”, and certainly we represent it by advancing science and engineering through our labs and centers everyday.</description>
+    </item>
+    
+  </channel>
+</rss>

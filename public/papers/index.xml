@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Papers on Kshitij Grover</title>
+    <link>http://kshitijgrover.com/papers/</link>
+    <description>Recent content in Papers on Kshitij Grover</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kshitijgrover.com/papers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mental Causes: A Response to Yablo</title>
+      <link>http://kshitijgrover.com/files/yablo-response.pdf</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/files/yablo-response.pdf</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Living with Sisyphus</title>
+      <link>http://kshitijgrover.com/files/living-with-sisyphus.pdf</link>
+      <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/files/living-with-sisyphus.pdf</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ignoring the Diagnosis</title>
+      <link>http://kshitijgrover.com/papers/ignoring-diagnosis/</link>
+      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/papers/ignoring-diagnosis/</guid>
+      <description>In this essay, I will consider an ethical problem regarding the doctor-patient relationship that has far reaching practical implications. Let’s take the following abbreviated example as a guide to our discussion:
+ Q: A 49-year old individual (S) has voluntarily chosen to see a neurologist at the recommendation of her internist, but refuses to learn of the subsequent diagnosis. In fact, the diagnosis — which her internist knows — is positive for Pick’s disease[1].</description>
+    </item>
+    
+    <item>
+      <title>Sex Selective Abortion</title>
+      <link>http://kshitijgrover.com/papers/sex-selective-abortion/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/papers/sex-selective-abortion/</guid>
+      <description>Assumptions and Argument In this paper, I want to consider the topic of sex-selective abortion (SSA), and how it relates to abortion on the basis of a genetic disability (DBA). We seem to prima facie accept the following two propositions:
+(1*) Abortion on the basis of a disability (e.g. down’s syndrome) is morally permissible.
+(2*) Abortion based on the sex of the fetus is morally impermissible, or unjust.
+I will primarily argue for what I call the consistent stance: there is no morally relevant difference between SSA and DBA.</description>
+    </item>
+    
+    <item>
+      <title>A Defense of Finite Frequentism</title>
+      <link>http://kshitijgrover.com/papers/finite-frequentism/</link>
+      <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/papers/finite-frequentism/</guid>
+      <description>In this essay, I will aim to defend the account of probability known as Finite Frequentism. Finite Frequentism holds that the probability of A is simply the relative frequency of realized occurrences of A with respect to a reference class of repeated or similar events. Let me briefly illustrate this with an example: if we draw a ball from an urn 1000 times, and we observe a red ball 50 times, we assert that the probability of drawing a red ball is 0.</description>
+    </item>
+    
+    <item>
+      <title>Causality: Ambiguous Manipulations</title>
+      <link>http://kshitijgrover.com/papers/ambiguous-manipulations/</link>
+      <pubDate>Mon, 14 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://kshitijgrover.com/papers/ambiguous-manipulations/</guid>
+      <description>Introduction In this essay, I will consider the problem of modeling a causal system using scientific data and a set of basic assumptions. In myriad fields — from economics to medicine — a significant goal is to build a model of the system under study so we can properly perform causal inference. Specifically, we want to parse relationships from the variables in the data that will accurately predict the functioning of the system under a modified state.</description>
+    </item>
+    
+  </channel>
+</rss>

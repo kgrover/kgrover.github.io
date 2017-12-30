@@ -1,0 +1,44 @@
+baseURL = "http://kshitijgrover.com"			# Site's URL
+title = "Kshitij Grover"								# Site's Name
+theme = "manis"
+pluralizeListTitles = false
+paginate = 10								# Minimum number of item before paginate navigation show up
+canonifyURL = true
+
+
+[taxonomies]
+	tag = "tags"
+
+
+[params]
+	debugCSS = true						# If false use use minified CSS (ui.min.css)
+	# Site meta description
+	description = "Kshitij Grover's website"
+
+	# 404 Configuration
+	head404 = "Sorry, I can find what you want."
+	sub404 = "Back to <a href='/'>Home</a>."
+
+	colorTheme = "#dd4d67"					# Color of your website
+	latestCount = 10						# Maximum number of item in Latest Posts or Works
+	faviconImg = ""							# Path to site's favicon image
+	dateFmt = "02 Jan 2006"				# Date format in item list
+
+	# Code Highlighting (HighlightJS)
+	highlightJs = true
+	highlightJsLanguages = [ "go" ]
+	highlightJsStyle = "ocean"
+
+	# Social Links
+	email = "k.grover123@gmail.com"
+	github = "https://github.com/kgrover/"
+	twitter = "https://twitter.com/kshithappens"
+
+
+# Language Configuration
+defaultContentLanguage = "en"
+# Edit this if you want to translate your blog
+#[languages.in]
+#	lang = "in"
+#	languageName = "Bahasa Indonesia"
+#	weight = 1

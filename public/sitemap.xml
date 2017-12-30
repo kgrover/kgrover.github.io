@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://kshitijgrover.com/blog/newcomb/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/files/yablo-response.pdf</loc>
+    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/files/living-with-sisyphus.pdf</loc>
+    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/blog/communication-caltech/</loc>
+    <lastmod>2017-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/papers/ignoring-diagnosis/</loc>
+    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/papers/sex-selective-abortion/</loc>
+    <lastmod>2016-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/papers/finite-frequentism/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/papers/ambiguous-manipulations/</loc>
+    <lastmod>2016-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/blog/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/</loc>
+    <lastmod>2017-09-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/papers/</loc>
+    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://kshitijgrover.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
